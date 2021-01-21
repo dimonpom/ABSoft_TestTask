@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,5 +19,7 @@ jobs:
         run: npm install
       - name: Run Test
         run: npx wdio wdio.conf.js
+        env:
+          ENV_PATH: environment/QS
 
       
