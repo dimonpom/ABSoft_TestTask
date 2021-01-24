@@ -64,7 +64,7 @@ describe('TEST-3', () => {
 	var titles = [];
 	it('should get response from request', () => {
 		chai.request('jsonplaceholder.typicode.com')
-			.get('/todos?_start=0&amp;_limit=5')
+			.get('/todos?_start=0&_limit=5')
 			.end((err, res)  => {
 				res.body.forEach(i => {
 					titles.push(i.title)
